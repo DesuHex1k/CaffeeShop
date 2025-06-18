@@ -3,9 +3,12 @@ import Image from 'next/image';
 import styles from './Header.module.css';
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
+import {useState} from "react";
 
 export default function Header() {
     const pathname = usePathname();
+    const [menuOpen, setMenuOpen] = useState(true);
+
     const navLinks = [
         { href: '/', label: 'Головна' },
         { href: '/about', label: 'Про нас' },
@@ -14,7 +17,10 @@ export default function Header() {
     ];
     return (
         <header className={styles.mainHeader}>
-            <nav className={styles.navBar}>
+            <div className={styles.logoOnly} onClick={() => setMenuOpen(prev => !prev)}>
+                <Image  src="/logo.png" alt="Logo" width={80} height={80} />
+            </div>
+                <nav className={`${styles.navBar} ${menuOpen ? styles.open : styles.closed}`}>
                 <ul className={styles.navLeft}>
                     {navLinks.map(link => (
                         <li key={link.href}>

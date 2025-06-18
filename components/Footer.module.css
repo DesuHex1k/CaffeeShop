@@ -56,3 +56,36 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5em 1em;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .content > div {
+        width: 100%;
+    }
+
+    .media {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8em;
+    }
+
+    .hr {
+        margin: 1em auto;
+        width: 80%;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+    }
+}
