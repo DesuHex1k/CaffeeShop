@@ -100,7 +100,7 @@
     pointer-events: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .navBar {
         flex-direction: column;
         gap: 20px;
