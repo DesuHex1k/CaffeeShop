@@ -1,0 +1,130 @@
+.section {
+    text-align: center;
+    padding: 3em;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.arrow {
+    background: #f3f0e6;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 72px;
+    height: 72px;
+    transition: background 0.3s;
+}
+
+.arrow:hover {
+    background-color: #e0d5c2;
+}
+
+.card {
+    max-width: 600px;
+    background-color: #f7f4ed;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.author {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1f1f1f;
+}
+
+.quoteMark {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 4rem;
+    color: #e8e3d8;
+    pointer-events: none;
+}
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+@media (max-width: 1200px) {
+    .text {
+        font-size: 1.3rem;
+    }
+
+    .author {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .arrow {
+        width: 56px;
+        height: 56px;
+    }
+
+    .card {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .text {
+        font-size: 1.1rem;
+    }
+
+    .author {
+        font-size: 1rem;
+    }
+
+    .quoteMark {
+        font-size: 3rem;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .arrow {
+        width: 44px;
+        height: 44px;
+    }
+
+    .arrow svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .author {
+        font-size: 0.95rem;
+    }
+
+    .quoteMark {
+        font-size: 2.5rem;
+    }
+}

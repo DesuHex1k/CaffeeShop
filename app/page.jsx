@@ -1,6 +1,7 @@
 import React from 'react';
 import './pageHome.css'
 import Image from "next/image";
+import Testimonials from "../components/Testimonials";
 
 const Page = () => {
     const menuItems = [
@@ -159,9 +160,9 @@ const Page = () => {
                     <h1>Заброннюй стіл</h1>
                     <form action="" className="form">
                         <div className="grid">
-                            <input type="text" placeholder="Your Name" />
-                            <input type="email" placeholder="Email Address" />
-                            <input type="tel" placeholder="Phone Number" />
+                            <input type="text" placeholder="Ваше ім'я" />
+                            <input type="email" placeholder="Електронна пошта" />
+                            <input type="tel" placeholder="Номер телефона" />
                             <input type="date" placeholder="MM/DD/YYYY" />
                             <select>
                                 <option>7:00</option>
@@ -187,13 +188,16 @@ const Page = () => {
                         </div>
                     </form>
 
-                    <textarea placeholder="Your message..." rows="4" />
+                    <textarea placeholder="Ваше повідомлення..." rows="4" />
 
-                    <button type="submit" className='cartButton'>Book Now</button>
+                    <button type="submit" className='cartButton'>Забронювати</button>
                 </div>
-
             </div>
 
+            <div className="shop content">
+                <h1>Відгуки</h1>
+                <Testimonials/>
+            </div>
         </div>
     );
 };
