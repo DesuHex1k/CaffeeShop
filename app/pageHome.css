@@ -35,14 +35,14 @@
     max-width: 1200px;
     width: 100%;
     align-items: end;
-    position: absolute;
-    bottom: 20px;
+    position: relative;
+    margin-top: 1em;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .bottom img {
-    height: 60vh;
+    height: 50vh;
     width: auto;
 }
 
@@ -67,7 +67,6 @@
 }
 
 .menu_page {
-    height: 100vh;
     padding: 2rem;
     background-color: #fdf9f3;
     display: flex;
