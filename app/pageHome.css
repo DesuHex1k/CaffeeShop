@@ -1,6 +1,4 @@
-.page {
 
-}
 .about h1 {
     margin-top: 1em;
 }
@@ -92,7 +90,6 @@
     display: flex;
     gap: 1em;
     align-items: center;
-    /*margin-bottom: 2rem;*/
 }
 
 .image {
@@ -179,14 +176,14 @@
     font-size: 14px;
     text-transform: uppercase;
     border: 1px solid #333;
-    background-color: #f9f7f1; /* світлий фон */
+    background-color: #f9f7f1; /* светлый фон */
     color: #333;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .cartButton:hover {
-    background-color: #c18f53; /* золотисто-коричневий */
+    background-color: #c18f53; /* золотисто-коричневый */
     color: #fff;
     border: none;
 }
@@ -279,7 +276,7 @@ textarea {
     }
 
     .menu {
-        grid-template-columns: 1fr; /* Один стовпчик */
+        grid-template-columns: 1fr; /* Один столбчик */
         gap: 1rem;
         padding: 1rem;
     }
@@ -319,4 +316,4 @@ textarea {
         padding: 1rem;
         height: auto;
     }
-}
+} 

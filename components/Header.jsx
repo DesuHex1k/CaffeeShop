@@ -13,12 +13,11 @@ export default function Header() {
         { href: '/', label: 'Головна' },
         { href: '/about', label: 'Про нас' },
         { href: '/menu', label: 'Меню' },
-        { href: '/booking', label: 'Бронювання' },
+        
     ];
     const navLinksRight = [
-        { href: '/reviews', label: 'Відгуки' },
+        { href: '/booking', label: 'Бронювання' },
         { href: '/shop', label: 'Магазин' },
-        { href: '/contact', label: 'Контакти' },
         {href: '/cart', label: 'Кошик'},
     ];
     return (

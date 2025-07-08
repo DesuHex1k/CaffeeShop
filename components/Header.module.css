@@ -16,20 +16,12 @@
 .navRight {
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 450px;
     padding: 0;
     margin: 0;
 }
-
-/*.navLeft {*/
-/*    gap: 40px;*/
-/*}*/
-
-/*.navRight {*/
-/*    gap: 35px;*/
-/*}*/
 
 .navLeft a,
 .navRight a {
@@ -75,14 +67,12 @@
     padding: 2px 6px;
 }
 
-/* Сховаємо меню і логіку розгортання */
 .logoOnly {
     display: none;
     justify-content: center;
     cursor: pointer;
 }
 
-/* Початковий стан */
 .navBar {
     overflow: hidden;
     transition: max-height 0.4s ease, opacity 0.3s ease;
@@ -94,9 +84,8 @@
     pointer-events: none;
 }
 
-/* Відкритий стан */
 .open {
-    max-height: 1000px; /* достатньо велике, щоб вмістився весь контент */
+    max-height: 1000px;
     opacity: 1;
     pointer-events: auto;
 }

@@ -4,12 +4,16 @@ import styles from './Testimonials.module.css';
 
 const testimonials = [
     {
-        author: "CHARLES JUAREZ",
-        text: "Aores autem accusamus magni doloribus qui nostrum tenetur dicta rem eveniet soluta voluptates inventore. Aesum dolorum fugiat sint. veritatis libero explicabo obcaecati voluptate, accusantium optio voluptatem.",
+        author: "ІГОР КОВАЛЕНКО",
+        text: "Найкраща кава, яку я коли-небудь куштував! Дуже затишна атмосфера та приємний персонал. Рекомендую всім!",
     },
     {
-        author: "RAICHEL SMITH",
-        text: "Mores autem accusamus magni doloribus qui nostrum tenetur dicta rem eveniet soluta voluptates inventore. Aesum dolorum fugiat sint. veritatis libero explicabo obcaecati voluptate, accusantium optio voluptatem.",
+        author: "СВІТЛАНА МЕЛЬНИК",
+        text: "Дуже сподобалося обслуговування і вибір десертів. Тут завжди хочеться залишитися довше!",
+    },
+    {
+        author: "ОЛЕНА ПЕТРЕНКО",
+        text: "Дуже затишне місце з неймовірною атмосферою! Кава завжди свіжа та смачна, а персонал привітний і уважний. Обов'язково повернуся ще раз!",
     },
 ];
 
@@ -18,15 +22,15 @@ export default function Testimonials() {
     const [fade, setFade] = useState(false);
 
     const handleChange = (direction) => {
-        setFade(true); // старт анімації зникнення
+        setFade(true);
         setTimeout(() => {
             setCurrent((prev) =>
                 direction === 'next'
                     ? (prev + 1) % testimonials.length
                     : (prev - 1 + testimonials.length) % testimonials.length
             );
-            setFade(false); // запуск з’явлення
-        }, 300); // відповідно до transition у CSS
+            setFade(false);
+        }, 300);
     };
 
     return (

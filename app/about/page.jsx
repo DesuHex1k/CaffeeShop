@@ -10,7 +10,7 @@ const Page = () => {
 
             <div className="quote">
                 <h1>
-                "Good ideas start with brainstorming great ideas start with coffee"
+                "Гарні ідеї народжуються під час обговорень, а великі ідеї — з чашки кави"
                 </h1>
             </div>
 

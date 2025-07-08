@@ -18,6 +18,9 @@
     width: 72px;
     height: 72px;
     transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .arrow:hover {
