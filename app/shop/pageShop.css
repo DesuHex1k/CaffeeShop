@@ -1,6 +1,14 @@
 .shopPage {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
+}
+
+.shopContainer {
+    width: 100%;
 }
 
 .shopHero {
@@ -25,7 +33,7 @@
 }
 
 @media (max-width: 1200px) {
-    .bookingTitle {
+    .shopTitle {
         font-size: 1.8rem;
     }
 

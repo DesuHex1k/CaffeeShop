@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import '../../components/Shop';
 import './pageShop.css';
@@ -29,7 +30,9 @@ import Shop from '../../components/Shop';
 
 const ShopPage = () => (
     <div className="shopPage">
-        <Shop products={products} />
+        <div className="shopContainer">
+            <Shop products={products} />
+        </div>
         <div className="shopHero">
             <h1 className="shopTitle">
                 Ласкаво просимо до нашого магазину!

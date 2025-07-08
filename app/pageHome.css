@@ -3,11 +3,6 @@
     margin-top: 1em;
 }
 
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
 .about {
     height: 100vh;
     color: #513625;
@@ -15,6 +10,12 @@
 
 .about h1 {
     font-weight: 600;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .page h1 {
