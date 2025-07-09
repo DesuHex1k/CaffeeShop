@@ -8,7 +8,7 @@ const BookingForm = () => (
                 <input type="text" placeholder="Ваше ім'я" />
                 <input type="email" placeholder="Електронна пошта" />
                 <input type="tel" placeholder="Номер телефону" />
-                <input type="date" placeholder="ДД/ММ/РРРР" />
+                <input type="date" defaultValue={new Date().toISOString().split('T')[0]}/>
                 <select>
                     <option>7:00</option>
                     <option>8:00</option>
