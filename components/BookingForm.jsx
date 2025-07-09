@@ -1,12 +1,15 @@
 "use client";
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 
 const BookingForm = () => {
   const formRef = useRef();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     const form = formRef.current;
     const data = {
       name: form[0].value,
@@ -30,6 +33,7 @@ const BookingForm = () => {
     } else {
       alert('Помилка відправки!');
     }
+    setIsLoading(false);
   };
 
   return (
@@ -64,7 +68,9 @@ const BookingForm = () => {
           </select>
         </div>
         <textarea placeholder="Ваше повідомлення..." rows="4" />
-        <button type="submit" className='cartButton'>Забронювати</button>
+        <button type="submit" className='cartButton' disabled={isLoading}>
+          {isLoading ? 'Завантаження...' : 'Забронювати'}
+        </button>
       </form>
     </div>
   );

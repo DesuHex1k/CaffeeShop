@@ -7,6 +7,7 @@ const CartPage = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -22,6 +23,7 @@ const CartPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     handleOrder();
   };
 
@@ -36,12 +38,13 @@ const CartPage = () => {
 
     const data = await res.json();
     if (res.ok) {
-        alert('Заказ успешно создан!');
+        alert('Замовлення успішно створено!');
         localStorage.removeItem('cart');
         setCart([]);
     } else {
-        alert('Ошибка: ' + data.error);
+        alert('Помилка: ' + data.error);
     }
+    setIsLoading(false);
 };
 
   return (
@@ -103,7 +106,9 @@ const CartPage = () => {
               className={styles.cartInput}
             />
           </div>
-          <button type="submit" className={styles.submitButton}>Підтвердити замовлення</button>
+          <button type="submit" className={styles.submitButton} disabled={isLoading}>
+            {isLoading ? 'Завантаження...' : 'Підтвердити замовлення'}
+          </button>
         </form>
       )}
     </div>
